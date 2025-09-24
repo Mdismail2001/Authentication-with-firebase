@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App.jsx";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom"; // ✅ correct package is react-router-dom
-import Root from "./Layouts/HomeLayout/Root.jsx";
+import Root from "./Layouts/HomeLayout/HomeRoot.jsx";
 import Home from "./Layouts/HomeLayout/Home.jsx";
 import About from "./Layouts/HomeLayout/About.jsx";
 import AuthRoot from "./Layouts/AuthLayout/AuthRoot.jsx";
@@ -21,11 +21,11 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "auth",
+    path: "",
     Component: AuthRoot,
     children: [
-      { path: "login", Component: Login },
-      { path: "register", Component: Register },
+      { path: "/login", Component: Login },
+      { path: "/register", Component: Register },
     ],
   },
 
